@@ -1,0 +1,8 @@
+coverage
+doc
+log/*.log
+tmp/*
+db/schema.rb
+db/*.sqlite3
+config/database.yml
+.DS_Store
