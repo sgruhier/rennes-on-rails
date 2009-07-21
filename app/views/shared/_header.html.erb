@@ -1,0 +1,8 @@
+<div id="header">
+  <% unless current_user %>
+    <%= link_to "sign in", sign_in_path %>
+    <%= link_to "sign up", sign_up_path %>
+  <% else %>
+    <%= link_to "logout", sign_out_path %>
+  <% end %>
+</div>

@@ -26,3 +26,6 @@ config.action_view.cache_template_loading            = true
 
 # Enable threaded mode
 # config.threadsafe!
+HOST = "rennesonrails.com"
+DO_NOT_REPLY = "donotreply@rennesonrails.com"
+
