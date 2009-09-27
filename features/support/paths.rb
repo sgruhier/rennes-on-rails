@@ -4,6 +4,8 @@ module NavigationHelpers
     
     when /the homepage/i
       root_path
+    when /items page/i
+      items_path
     when /the sign up page/i
       new_user_path
     when /the sign in page/i
