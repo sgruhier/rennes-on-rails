@@ -1,11 +1,7 @@
-<% form_for @item do |f| -%>
-  <%= f.error_messages  %>
-  
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-
-  <%= f.submit "Create" %>
+<% semantic_form_for @item do |f| -%>
+  <%- f.inputs do -%>
+    <%= f.input :title %>
+    <%= f.input :description %>
+  <%- end -%>
+  <%= f.buttons %>
 <% end -%>

@@ -2,7 +2,14 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 fr:
-  hello: "Hello world"
-  
   user:
     login_in: "Se connecter"
+
+  formtastic:
+    labels:
+      title: "Titre"
+      description: "Description"
+      
+    actions:
+      create: "Créer"
+      

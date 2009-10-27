@@ -29,9 +29,10 @@ config.action_mailer.delivery_method = :test
 
 config.gem "rspec", :lib => false, :version => ">=1.2.2"
 config.gem "rspec-rails", :lib => false, :version => ">=1.2.2"
+config.gem "remarkable_rails", :lib => false
+
 config.gem "webrat", :lib => false, :version => ">=0.4.3"
 config.gem "cucumber", :lib => false, :version => ">=0.3.2"
-
 HOST = "localhost"
 DO_NOT_REPLY = "donotreply@example.com"
 

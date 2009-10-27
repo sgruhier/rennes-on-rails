@@ -9,6 +9,10 @@ describe Item do
     }
   end
 
+  it { should validate_presence_of(:title) }
+  it { should validate_presence_of(:user) }
+  it { should belong_to(:user) }
+
   it "should create a new instance given valid attributes" do
     Item.create!(@valid_attributes)
   end

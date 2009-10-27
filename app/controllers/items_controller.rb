@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_filter :authenticate , :only => [:new, :create]
+  
   def index
     @items = Item.all
   end
@@ -8,7 +10,7 @@ class ItemsController < ApplicationController
   end
   
   def create
-    @item = Item.new params[:item]
+    @item = current_user.items.build params[:item]
     if @item.save
       flash[:success] = "Item successfully created."
       redirect_to items_path

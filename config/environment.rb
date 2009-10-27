@@ -20,7 +20,7 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem 'webrat'
-  config.gem 'cucumber'
+  config.gem 'cucumber', :version => '0.3.101'
   config.gem "thoughtbot-clearance", 
     :lib     => 'clearance', 
     :source  => 'http://gems.github.com', 
@@ -30,6 +30,7 @@ Rails::Initializer.run do |config|
     :source  => "http://gems.github.com", 
     :version => '1.2.1'
   
+  config.gem 'formtastic'
   
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
