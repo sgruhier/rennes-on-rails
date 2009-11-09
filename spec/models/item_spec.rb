@@ -5,7 +5,7 @@ describe Item do
     @valid_attributes = {
       :title => "value for title",
       :description => "value for description",
-      :user_id => 1
+      :user => Factory(:email_confirmed_user)
     }
   end
 

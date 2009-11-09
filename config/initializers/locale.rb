@@ -1,1 +1,1 @@
-I18n.default_locale = 'fr'
+I18n.default_locale = 'en'
