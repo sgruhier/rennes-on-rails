@@ -11,7 +11,7 @@ Feature: Item
      When I follow "Add Item"
       And I fill in "title" with "My title"
       And I fill in "description" with "My description"
-      And I press I18n.t('formtastic.actions.create')
+      And I press "Create"
      Then I should see "Item successfully created."
       And I should see "My title"
 
