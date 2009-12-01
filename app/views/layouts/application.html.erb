@@ -5,13 +5,43 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<title>Rennes On Rails</title>
-	<%= stylesheet_link_tag 'formtastic', 'formtastic_changes' %>
+	<%= stylesheet_link_tag 'formtastic', 'formtastic_changes', '960', 'screen' %>
 </head>
 
 <body>
-<%= display_flash %>
-<%= render "/shared/header" %>
-<%= yield %>
+
+
+		<div class="headerwrap">
+			<div id="header" class="container">
+				<div id="logo" class="grid_6">Logo</div>
+				<div id="myaccount" class="grid_6">
+                  <%= render "/shared/header" %>
+                </div>
+			</div>
+		</div>
+		<div class="menusearchwrap">
+			<div id="menusearch" class="container">
+				<div id="menu">
+					Menu bar
+				</div>
+				<div id="search">
+					Search bar
+				</div>
+			</div>
+		</div>
+
+		<div id="main" class="container">
+
+			<div class="slider">Items slider</div>
+
+            <%= display_flash %>
+            <%= yield %>
+            <div class="grid_6">Colonne de gauche</div>
+            <div class="grid_6">Colonne de droite</div>
+		</div>
+
+
+
   
 </body>
 </html>
