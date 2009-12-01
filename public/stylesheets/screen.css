@@ -1,0 +1,67 @@
+body {
+    margin:0px;
+	font-family: Georgia, "Times New Roman", Palatino, Times;
+	font-size: 1em;
+	color: #2f1f3c;
+}
+.headerwrap {
+	width:100%;
+	background-color: #3a2c43;
+}
+#header {
+	height:130px;
+	color: #FFF;
+	background-color: #3a2c43;
+}
+#logo {
+    float:left;
+}
+#myaccount {
+    float:right;
+}
+.menusearchwrap {
+	width:100%;
+	background-color: #c6c4c7;
+}
+#menusearch {
+	height: 62px;
+	background-color: #c6c4c7;
+}
+#menu { 
+	height:62px;
+	display:inline;
+}
+#search {
+	height: 62px;
+	display: inline;
+}
+.slider {
+	border: solid 1px #c6c4c7;
+	color: #c6c4c7;
+	padding-top: 10%;
+	margin: 20px 0px;
+	font-size: 4em;
+	text-align: center;
+}
+
+.section {
+	font-family: "lucida sans";
+	font-weight: bold;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	color: #2f1f3c;
+	background-color: #c6c4c7;
+	padding: 4px;
+}
+h2 {
+	font-family: "lucida sans";
+	text-transform: uppercase;
+	color: #2f1f3c;
+	background-color: #c6c4c7;
+}
+.col1 {
+	float:left;
+}
+.col2 {
+	float:right;
+}
