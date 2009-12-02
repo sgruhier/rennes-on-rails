@@ -3,6 +3,7 @@ body {
 	font-family: Georgia, "Times New Roman", Palatino, Times;
 	font-size: 1em;
 	color: #2f1f3c;
+    text-align: center;
 }
 .headerwrap {
 	width:100%;

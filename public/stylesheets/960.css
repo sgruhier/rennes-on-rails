@@ -9,7 +9,7 @@
 
 /* Containers
 ----------------------------------------------------------------------------------------------------*/
-.container { margin-left: auto; margin-right: auto; width: 960px; }
+.container { margin-left: auto; margin-right: auto; width: 960px; text-align:left; }
 
 /* Grid >> Global
 ----------------------------------------------------------------------------------------------------*/
