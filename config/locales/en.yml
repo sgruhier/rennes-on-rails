@@ -6,3 +6,7 @@ en:
 
   user:
     login_in: "Log in"
+    
+  paginate:
+    next: "Next"
+    previous: "Previous"

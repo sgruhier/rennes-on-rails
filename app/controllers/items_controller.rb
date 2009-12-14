@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_filter :authenticate , :only => [:new, :create]
   
   def index
-    @items = Item.all
+    @items = Item.paginate :page => params[:page]
   end
   
   def new

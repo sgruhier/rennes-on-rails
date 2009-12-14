@@ -17,3 +17,16 @@ describe Item do
     Item.create!(@valid_attributes)
   end
 end
+
+# == Schema Information
+#
+# Table name: items
+#
+#  id          :integer         not null, primary key
+#  title       :string(255)
+#  description :text
+#  user_id     :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+

@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
   <head>
     <title>Rennes On Rails</title>
-    <%= stylesheet_link_tag 'formtastic', 'formtastic_changes', '960', 'screen' %>
+    <%= stylesheet_link_tag 'formtastic', 'formtastic_changes', '960', 'screen', 'paginate' %>
   </head>
 
   <body>
@@ -29,13 +29,10 @@
     </div>
 
     <div id="main" class="container">
-
-      <div class="slider">Items slider</div>
-
       <%= display_flash %>
+
+
       <%= yield %>
-      <div class="grid_6">Colonne de gauche</div>
-      <div class="grid_6">Colonne de droite</div>
     </div>
 
 

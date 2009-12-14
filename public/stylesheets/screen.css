@@ -14,6 +14,10 @@ body {
 	color: #FFF;
 	background-color: #3a2c43;
 }
+
+#header a {
+  color: #FFF;
+}
 #logo {
     float:left;
 }
@@ -65,4 +69,10 @@ h2 {
 }
 .col2 {
 	float:right;
+}
+
+.item {
+  float:left;
+  width:300px;
+  border: 1px solid #DDD;
 }

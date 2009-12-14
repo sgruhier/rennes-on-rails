@@ -12,4 +12,7 @@ fr:
       
     actions:
       create: "Créer"
-      
+
+  paginate:
+    next: "Suivant"
+    previous: "Précédent"      
