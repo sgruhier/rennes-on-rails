@@ -2,8 +2,11 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
-
+  edit: "Edit"
+  destroy: "Destroy"
+  show: "Show"
+  confirmation: "Are you sure?"
+  
   user:
     login_in: "Log in"
     

@@ -14,5 +14,7 @@ class Item < ActiveRecord::Base
   belongs_to :user
   
   validates_presence_of :title, :user
+  
+  named_scope :recents, :order => 'created_at DESC', :limit => 10
 end
 

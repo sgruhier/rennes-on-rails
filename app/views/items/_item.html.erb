@@ -1,6 +1,11 @@
-<div class='item'>
+<div class='list'>
 <%= h item.title %>
 <br/>
 <%= h item.description %>
 <br/>
+<%= link_to t('show'), item_path(item) %>
+<%= link_to t('edit'), edit_item_path(item) %>
+<%= link_to t('destroy'), item_path(item, :page => params[:page]), 
+                         :method => :delete,
+                         :confirm => t('confirmation') %>
 </div>
