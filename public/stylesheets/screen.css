@@ -5,6 +5,7 @@ body {
 	color: #2f1f3c;
     text-align: center;
 }
+img {border:0;}
 .headerwrap {
 	width:100%;
 	background-color: #3a2c43;
@@ -15,8 +16,12 @@ body {
 	background-color: #3a2c43;
 }
 #logo {
+    width:282px;
+    height:130px;
     float:left;
+    left:0;
 }
+
 #myaccount {
     float:right;
 }
