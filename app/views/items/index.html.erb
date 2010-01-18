@@ -1,3 +1,13 @@
-<%= link_to "Add item", new_item_path %>
+<div id="add_item">
+  <%= link_to "Add item", new_item_path %>
+</div>
+
+<%= will_paginate @posts, :class => 'digg_pagination', 
+                          :previous_label => t('paginate.previous'), 
+                          :next_label => t('paginate.next') %>
 
 <%= render @items %>
+
+<%= will_paginate @posts, :class => 'digg_pagination', 
+                          :previous_label => t('paginate.previous'), 
+                          :next_label => t('paginate.next') %>

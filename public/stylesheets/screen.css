@@ -15,6 +15,10 @@ img {border:0;}
 	color: #FFF;
 	background-color: #3a2c43;
 }
+
+#header a {
+  color: #FFF;
+}
 #logo {
     width:282px;
     height:130px;
@@ -70,4 +74,10 @@ h2 {
 }
 .col2 {
 	float:right;
+}
+
+.list {
+  float:left;
+  width:300px;
+  border: 1px solid #DDD;
 }
