@@ -25,12 +25,13 @@ Rails::Initializer.run do |config|
     :lib     => 'clearance', 
     :source  => 'http://gems.github.com', 
     :version => '0.6.9'
-  config.gem 'thoughtbot-factory_girl',
-    :lib     => 'factory_girl',
-    :source  => "http://gems.github.com", 
-    :version => '1.2.1'
-  
+  # config.gem 'thoughtbot-factory_girl',
+  #   :lib     => 'factory_girl',
+  #   :source  => "http://gems.github.com", 
+  #   :version => '1.2.1'
+  config.gem 'factory_girl'
   config.gem 'formtastic'
+  config.gem 'aasm'
   config.gem 'will_paginate', :source => 'http://gemcutter.org'
   
   

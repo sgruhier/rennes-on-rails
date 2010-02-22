@@ -52,6 +52,10 @@ Spec::Runner.configure do |config|
 end
 
 def sign_in
-  @current_user = Factory(:email_confirmed_user)
+  sign_in_as(:email_confirmed_user)
+end
+
+def sign_in_as(user)
+  @current_user = Factory(user)
   controller.should_receive(:current_user).any_number_of_times.and_return(@current_user)
 end
