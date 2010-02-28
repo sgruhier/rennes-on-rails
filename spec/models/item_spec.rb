@@ -49,29 +49,24 @@ describe Item do
     end
   end
   
-  %w(booked available).each do |state| 
-    it "should be borrowable if #{state}" do
-      item = Factory.create(:item, :user => Factory(:email_confirmed_user), :state => state)
-      item.borrow
-      item.should be_borrowed
-    end
-  end
-
-  %w(booked borrowed unavailable available).each do |state| 
-    item = Factory.create(:item, :user => Factory(:email_confirmed_user), :state => state)
-    if %w(borrowed unavailable).include?(state)
-      it "should not be borrowable if #{state}" do
-        lambda {
-          item.borrow
-        }.should raise_error(AASM::InvalidTransition)
-      end 
-    else
-      it "should description" do
-        item.borrow
-        item.should be_borrowed
-      end
-    end
-  end
   
+  All_states = %w(booked borrowed unavailable available) 
+  Borrowable_states = %w(booked available)
+
+  All_states.each do |state| 
+     item = Factory.create(:item, :user => Factory(:email_confirmed_user), :state => state)
+     if Borrowable_states.include?(state)
+       it "should be borrowable if #{state}" do
+         item.borrow
+         item.should be_borrowed
+       end
+     else
+       it "should not be borrowable if #{state}" do
+         lambda {
+           item.borrow
+         }.should raise_error(AASM::InvalidTransition)
+       end 
+     end
+   end
 end
 
