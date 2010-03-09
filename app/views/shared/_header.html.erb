@@ -1,9 +1,9 @@
 <div id="header">
   <% unless signed_in? %>
     <%= link_to t('user.login_in'), sign_in_path %>
-    <%= link_to "sign up", sign_up_path %>
+    <%= link_to t('user.sign_up'), sign_up_path %>
   <% else %>
     <%= link_to t('user.account'), items_path  %>
-    <%= link_to "logout", sign_out_path %>
+    <%= link_to t('user.logout'), sign_out_path %>
   <% end %>
 </div>

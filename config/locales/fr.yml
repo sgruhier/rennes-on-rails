@@ -9,6 +9,9 @@ fr:
   
   user:
     login_in: "Se connecter"
+    sign_up: "Créer un compte"
+    account: "Mon compte"
+    logout: "Déconnexion"
 
   formtastic:
     labels:

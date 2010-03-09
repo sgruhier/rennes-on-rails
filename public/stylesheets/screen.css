@@ -1,7 +1,7 @@
 body {
     margin:0px;
 	font-family: Georgia, "Times New Roman", Palatino, Times;
-	font-size: 1em;
+	font-size: 14px;
 	color: #2f1f3c;
     text-align: center;
 }
@@ -48,16 +48,15 @@ img {border:0;}
 .slider {
 	border: solid 1px #c6c4c7;
 	color: #c6c4c7;
-	padding-top: 10%;
+    font-size:40px;
 	margin: 20px 0px;
-	font-size: 4em;
 	text-align: center;
 }
 
 .section {
 	font-family: "lucida sans";
 	font-weight: bold;
-	font-size: 0.9em;
+	font-size: 13px;
 	text-transform: uppercase;
 	color: #2f1f3c;
 	background-color: #c6c4c7;

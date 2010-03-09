@@ -3,6 +3,8 @@
 <br/>
 <%= h item.description %>
 <br/>
+<%= h item.state %>
+<br/>
 <%= link_to t('show'), item_path(item) %>
 <%= link_to t('edit'), edit_item_path(item) %>
 <%= link_to t('destroy'), item_path(item, :page => params[:page]), 

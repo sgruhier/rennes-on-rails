@@ -9,7 +9,18 @@ en:
   
   user:
     login_in: "Log in"
-    
+    sign_up: "Sign up"
+    account: "My account"
+    logout: "Sign out"
+
+  formtastic:
+    labels:
+      title: "Title"
+      description: "Item desc"
+
+    actions:
+      create: "Create"
+
   paginate:
     next: "Next"
     previous: "Previous"
