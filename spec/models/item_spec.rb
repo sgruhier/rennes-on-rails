@@ -19,6 +19,7 @@ describe Item do
       :description => "value for description",
       :user => Factory(:email_confirmed_user)
     }
+    User.destroy_all
   end
 
   it { should validate_presence_of(:title) }
@@ -34,39 +35,32 @@ describe Item do
     item.should be_available
   end
   
-  it "should be booked an available item" do
-    item = Factory.create(:item, :user => Factory(:email_confirmed_user))
-    item.book
-    item.should be_booked
-  end
-  
-  %w(booked borrowed unavailable).each do |state| 
-    it "should not be bookable if #{state}" do
-      lambda {
-        item = Factory.create(:item, :user => Factory(:email_confirmed_user), :state => state)
-        item.book
-      }.should raise_error(AASM::InvalidTransition)
+  describe "State machine" do
+    before(:each) do
+      @user = Factory(:email_confirmed_user)
+    end
+
+    {
+      :borrow => [:booked, :available],
+      :book   => [:available]
+    }.each do |to_state, valid_from_states|
+    Item.aasm_states.map(&:name).each do |state| 
+        if valid_from_states.include?(state)
+          it "should be #{to_state}able if #{state}" do
+            item = Factory.create(:item, :user => @user, :state => state)
+            item.send to_state
+            item.send("#{to_state}ed?").should be_true
+          end
+        else
+          it "should not be #{to_state}able if #{state}" do
+            item = Factory.create(:item, :user => @user, :state => state)
+            lambda {
+              item.send to_state
+            }.should raise_error(AASM::InvalidTransition)
+          end 
+        end
+      end
     end
   end
-  
-  
-  All_states = %w(booked borrowed unavailable available) 
-  Borrowable_states = %w(booked available)
-
-  All_states.each do |state| 
-     item = Factory.create(:item, :user => Factory(:email_confirmed_user), :state => state)
-     if Borrowable_states.include?(state)
-       it "should be borrowable if #{state}" do
-         item.borrow
-         item.should be_borrowed
-       end
-     else
-       it "should not be borrowable if #{state}" do
-         lambda {
-           item.borrow
-         }.should raise_error(AASM::InvalidTransition)
-       end 
-     end
-   end
 end
 
